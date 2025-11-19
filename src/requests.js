@@ -1,9 +1,14 @@
 // src/requests.js
 
-function getWelcomeData() {
-	return fetch("http://ip-api.com/json/")
-		.then((response) => response.json())
-		.catch((err) => console.log(err, "welcome data failed"));
+async function getWelcomeData() {
+	try {
+		const response = await fetch('http://ip-api.com/json/');
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error('❌ Welcome data failed:', error);
+		return null;
+	}
 }
 
 // Function for REST Countries API
@@ -13,9 +18,9 @@ function getCountryData(country) {
 		.catch((err) => console.log(err, "country data failed"));
 }
 
-// 🌤️ New function — OpenWeather API
+// New function — OpenWeather API
 function getWeatherData(latitude, longitude) {
-	const apiKey = "Your_OpenWeather_API_Key_Here"; // Replace with your OpenWeather API key
+	const apiKey = "52973b32d2fdc5caba2bdf1a72671d88";
 	const url =
 		"https://api.openweathermap.org/data/2.5/weather?lat=" +
 		latitude +

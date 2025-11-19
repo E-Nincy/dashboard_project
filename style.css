@@ -1,0 +1,55 @@
+/* --- RESET STYLES --- */
+*,
+*::after,
+*::before {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+
+/* --- BASE STYLES --- */
+html {
+	font-size: 100%;
+}
+
+body {
+	box-sizing: border-box;
+	background-color: #237bff50;
+	color: black;
+	transition: background-color 5s, color 2s; /* nice fade-in effect */
+
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+
+	font-family: 'Barlow Condensed', 'Source Sans Pro', sans-serif;
+	line-height: 1.7;
+	padding: 3rem;
+}
+
+/* --- SECTION STYLES --- */
+.section {
+	height: 70vh; /* Each section fills most of the screen height */
+	margin: auto;
+	display: flex; /* Flexbox layout */
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 1rem;
+	margin-bottom: 2rem;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* --- TEXT STYLES --- */
+h2 {
+	font-size: 5rem;
+	text-transform: uppercase;
+	margin-bottom: 1rem;
+}
+
+p {
+	font-size: 3rem;
+	max-width: 70%;
+	margin: 0 auto;
+}
